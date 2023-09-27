@@ -1,0 +1,265 @@
+@media screen and (max-width: 767px) {
+
+    .header__wrapper {
+        width: 100vw;
+        border-bottom: 2px solid #c6c6c6;
+        padding: 0 15px;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+
+    .header__nav-search-wrapper {
+        display: none;
+    }
+
+    .header__nav-link-icon {}
+
+    .header__right-list li:nth-child(1),
+    .header__right-list li:nth-child(2) {
+        display: none;
+    }
+
+    .slider {
+        width: 100%;
+        height: 90%;
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+
+    .wrapper-slider {
+        width: 100%;
+        padding: 0px;
+        position: relative;
+        /* height: 89vh; */
+        height: 70vh;
+    }
+
+    .products {}
+
+    .product .col:last-child {
+        display: none;
+    }
+
+    .slides {
+        width: 500%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide img {
+        content: url(./img/slide_mb1.jpg);
+        width: 100%;
+        height: 78vh;
+    }
+
+
+    /* tab bottom */
+    .tab-mobile {
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+
+    .tab {
+        display: flex;
+        width: 100vw;
+        height: 80px;
+        align-items: stretch;
+        justify-content: space-around;
+        background-color: #fff;
+        border-radius: 0 0 15px 15px;
+
+    }
+
+    .tab a {
+        color: #000;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button:first-child {
+        border-bottom-left-radius: 15px;
+    }
+
+    .button:last-child {
+        border-bottom-right-radius: 15px;
+    }
+
+    .button:hover {
+        background-color: #a1a1a1;
+        cursor: pointer;
+    }
+
+    .button i {
+        font-size: 25px;
+        width: 1.2em;
+        height: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .button .text {
+        font-size: 16px;
+    }
+
+
+    .menu_tabs {
+        display: block;
+        margin: auto;
+    }
+
+    .trending-content_solo img {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .main-footer {
+        width: 100vw;
+        font-size: 13px;
+    }
+
+    .home-gallery {
+        display: none;
+    }
+
+
+}
+
+
+/* Style cho màn hình PC */
+
+@media screen and (max-width: 767px) {
+    .wrapper-slider {
+        width: 97%;
+        padding: 0 10px;
+        position: relative;
+        height: 60vh;
+        border: 1px px solid #000;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tab-mobile {
+        display: none;
+    }
+}
+
+/* Style cho tablet */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .wrapper-slider {
+        width: 98%;
+        padding: 0 10px;
+        position: relative;
+        height: 53vh;
+    }
+
+
+    .header__nav-search-wrapper {
+        display: none;
+    }
+}
+
+/* Style cho điện thoại di động */
+@media screen and (max-width: 767px) {
+    .wrapper-slider {
+        width: 98%;
+        padding: 0 10px;
+        position: relative;
+        height: 60vh;
+        border: 1px px solid #000;
+    }
+}
+
+@media (max-width: 767px) {
+    .slide img {
+        content: url('./img/slide_mb1.jpg');
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sub_menu {
+        display: none;
+        opacity: 1;
+    }
+
+    .header__nav-list {
+        display: inline-block;
+        position: absolute;
+        top: 82px;
+        left: -27px;
+        height: 82vh;
+        width: 75vw;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+    }
+
+    .header__nav-list li {
+        padding: 24px;
+        font-size: 20px;
+        font-weight: 400;
+        border: 1px solid #ccc;
+        margin: 0;
+    }
+
+    .header__nav-list li:hover {
+        background: #dad4d4;
+    }
+
+    .header__nav-list li:hover .sub-menu {
+        display: none;
+
+    }
+    
+        .menu_tabs {
+            position: relative;
+        }
+    span#time {
+        display: none;
+        position: relative;
+        font-size: 22px;
+    }
+
+   /* Hiển thị menu khi checkbox được chọn */
+   input[type="checkbox"]:checked~.menu_tabs #bar {
+       display: none;
+   }
+
+   input[type="checkbox"]:checked~.menu_tabs #time {
+       display: inline-block;
+   }
+
+   input[type="checkbox"]:checked~.header__nav-list {
+       display: block;
+   }
+
+   /* Ẩn menu khi checkbox không được chọn */
+   input[type="checkbox"]:not(:checked)~.header__nav-list {
+       display: none;
+   }
+
+
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+        
+}

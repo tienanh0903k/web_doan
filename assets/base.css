@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+}
+
+.app {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+
+}
+h3 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.cart-tab {
+    position: fixed;
+    top: 60px;
+    right: -350px;
+    /* Tab sẽ bị ẩn bên phải */
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    /* Sử dụng transition để tạo hiệu ứng di chuyển khi hiển thị tab */
+    z-index: 9999;
+}
+
+.cart-tab.show {
+    right: 0;
+    /* Hiển thị tab từ phải qua trái */
+}
+
+.a,
+ins,
+li,
+ul {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+
+}
+
+i {
+    color: #000;    
+}
+

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font -->
+    <script src="https://kit.fontawesome.com/da679a1af2.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/login.css">
+    <link rel="stylesheet" href="./assets/grid.css">
+    <title>Đăng Nhập</title>
+    <style>
+
+        .container_form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 66vh;
+        }
+
+        .wrapper_form {
+            max-width: 750px;
+            padding: 50px;
+        }
+
+        .user-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+
+        .input-box {
+            width: calc(100%/2);
+            padding: 12px;
+            margin: 20px 0 12px 0;
+        }
+
+        .input-box input {
+         height: 45px;
+         width: 100%;   
+         border: none;
+         outline: none;
+         padding-left: 15px;
+         font-size: 15px;
+         border: 1px solid rgba(66, 56, 56, 0.195);
+             
+        }
+
+        h1 {
+            color: #000;
+            text-align: center;
+            margin-top:12px;
+        }
+        span {
+            font-weight: 400;
+            color: #000;
+        }
+        .user-detail .input-box input:focus ,
+        .user-detail .input-box input:focus {
+            border-color: #2b2525;
+        }
+
+        form .button {
+            height: 45px;
+            margin-bottom:  12px;
+        }
+        form .button input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            background: #000;
+            border-bottom-right-radius: 24px;
+            border-top-left-radius: 24px;
+            border: 1px solid #000;
+        }
+        .button:hover input {
+            color: #000000;
+            background: #ffffff;
+            transition:  0.1s linear all;
+        }
+
+        .input.error {
+            border: 1px solid #b61414;
+        }
+
+        .input-box .form-message {
+            color: #ff0000;
+            font-weight: 100;
+            font-size: 10px;
+        }
+
+        .input-box.invalid .form-message {
+            color: #f33a58;
+        }
+
+        .input-box.invalid .form-control {
+            border-color: #f33a58;
+        }
+  
+
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <!-- ---header start--- -->
+        <div class="header__wrapper">
+            <header class="header">
+                <div class="header__left">
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item" id="item-1">
+                                <a class="header__nav-link" href="">Nam</a>
+                            </li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">Nu</a></li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">Tre em</a></li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">LifeStyle</a></li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">Bo suu tap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__center">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="https://pubcdn.ivymoda.com/ivy2/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <nav class="header__nav-right">
+                        <div class="header__nav-search-wrapper">
+                            <button class="header__nav-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input class="header__nav-input" type="text" placeholder="TÌM KIẾM SẢN PHẨM">
+                        </div>
+                        <ul class="header__right-list">
+                            <li class="header__right-item">
+                                <a href="" class="header__nav-link-icon">
+                                    <i class="fa-solid fa-headphones"></i>
+                                </a>
+                            </li>
+                            <li class="header__right-item">
+                                <a title="Dang nhap" href="login.html" class="header__nav-link-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                            </li>
+                            <li class="header__right-item">
+                                <a href="#" class="header__nav-link-icon">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <h1 style="font-size:30px; font-weight:300;">Dang ki</h1>
+            <div class="container_form">
+                <div class="wrapper_form">
+                    <form action="#" id="form-1">
+                        <div class="user-detail">
+                            <div class="input-box">
+                                <span>Ho Ten:</span>
+                                <input id="fullname" class="form-control" type="text" name ="fullname" placeholder="Nhap ho va ten">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="input-box">
+                                <span>Ten dang nhap:</span>
+                                <input id="username" class="form-control" type="text" name ="username" placeholder="Nhap ten dang nhap">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="input-box">
+                                <span>Email:</span>
+                                <input id="email" class="form-control" type="text" name ="email" placeholder="Nhap Email">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="input-box">
+                                <span>So dien thoai:</span>
+                                <input id="phone" class="form-control" type="text" name ="phone" placeholder="Nhap so dien thoai">
+                                 <span class="form-message"></span>
+                            </div>
+                            <div class="input-box">
+                                <span>Mat khau:</span>
+                                <input id="password" class="form-control" type="password" name ="password" placeholder="Nhap mat khau" placeholder="Nhap mat khau">
+                                 <span class="form-message"></span>
+                            </div>
+                            <div class="input-box">
+                                <span>Xac nhan mat khau:</span>
+                                <input id="comfirmPassword" class="form-control" type="password" name ="comfirmPassword" placeholder="Nhap lai mat khau">
+                                 <span class="form-message"></span>
+                            </div>
+
+                        </div>
+                        <div class="button">
+                            <button type="submit">Dang ki</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+</body>
+<script src="./js/register.js"></script>
+<script>
+     Validator({
+        form: '#form-1',
+        rules: [
+            Validator.isFullname('#fullname'),
+            Validator.isUsername('#username'),
+            Validator.isEmail('#email'),
+            Validator.isPhone('#phone'),
+            Validator.minLength('#password',6),
+            Validator.isFullname('#comfirmPassword'),
+            Validator.isComfirm('#comfirmPassword', function() {
+                return document.querySelector('#password').value;
+            })
+        ],
+        onSubmit: function(data) {
+            console.log(data);
+        }
+
+    })
+</script>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font -->
+    <script src="https://kit.fontawesome.com/da679a1af2.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
+
+    <link rel="stylesheet" href="./assets/login.css">
+    <link rel="stylesheet" href="./assets/grid.css">
+    <title>Đăng Nhập</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
+    .container-detail {
+        display: flex;
+        width: 100vw;
+        height: 1400px;
+        margin: 30px;
+    }
+
+    .product-detail__gallery {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .product-gallery__slide {
+        width: 100%;
+    }
+
+    .product-gallery__slide--small {
+        width: 30%;
+        height: 80%;
+        margin: auto 0;
+        padding: 15px;
+    }
+
+    h1.product-detail__title {
+        font-size: 33px;
+        padding: 20px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .product-gallery__controls {
+    position: relative;
+    display: grid;
+    gap: 80%;
+    left: -13%;
+    }
+
+    .product-gallery__control--prev {
+    transform: rotate(90deg);
+    }
+    .product-gallery__control--next {
+    transform: rotate(90deg);
+    }
+
+    .product-gallery__slide--small img {
+        height: 99px;
+        width: 66px;
+    }
+
+
+    .products__item-select li {
+    color: #000000;
+    padding: 12px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border: 1px solid #000000;
+    }
+
+
+    ul.products__item-select {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 20px;
+    }
+
+    .quantity {
+        width: 106.9px;
+        border: 1px solid #a29595;
+        margin: 30px;
+    }
+    .quantity input {
+        height: 20px;
+        padding: 12px 0;
+        outline: none;
+        border: none;
+    }
+    .quantity_container {
+    outline: auto;
+    }
+    .quantity button
+    {   padding: 12px;
+        border: 1px solid #a29595;
+        outline: none;
+    }
+
+    .product-detail__text {
+        margin: 22px;
+        color: #000;
+        font-weight: 400;
+        font-size: 24px;
+        display: grid;
+        gap: 20px;
+    }
+
+
+    .product-detail__color__input a {
+        width: 100px;
+        margin-left: 14px;
+    }
+    .product-detail__color__input img {
+        width: 24px;
+        height: 24px;
+    }
+
+    button.button-detail__add {
+        background: #000;
+        color: #fff;
+        padding: 12px 30px;
+    }
+    button.button-detail__buy {
+        background: #ffffff;
+        color: #000000;
+        padding: 12px 30px;
+    }
+</style>
+
+<body>
+    <div class="app">
+        <!-- ---header start--- -->
+        <!-- 
+            
+            <header class="header">
+                <div class="header__left">
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item" id="item-1">
+                                <a class="header__nav-link" href="">Nam</a>
+                            </li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">Nu</a></li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">Tre em</a></li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">LifeStyle</a></li>
+                            <li class="header__nav-item"><a class="header__nav-link" href="">Bo suu tap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__center">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="https://pubcdn.ivymoda.com/ivy2/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <nav class="header__nav-right">
+                        <div class="header__nav-search-wrapper">
+                            <button class="header__nav-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input class="header__nav-input" type="text" placeholder="TÌM KIẾM SẢN PHẨM">
+                        </div>
+                        <ul class="header__right-list">
+                            <li class="header__right-item">
+                                <a href="" class="header__nav-link-icon">
+                                    <i class="fa-solid fa-headphones"></i>
+                                </a>
+                            </li>
+                            <li class="header__right-item">
+                                <a title="Dang nhap" href="login.html" class="header__nav-link-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                            </li>
+                            <li class="header__right-item">
+                                <a href="#" class="header__nav-link-icon">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div> -->
+        <!-- --header end--- -->
+        <iframe src="header.html" frameborder="0" width="100%" height="100"></iframe>
+
+
+        <div class="container-detail">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6">
+                        <div class="product-detail__gallery">
+                            <div class="product-gallery__slide">
+                                <img class="product-gallery__img"
+                                    src="https://pubcdn.ivymoda.com/files/product/thumab/1280/2022/07/08/390f179f38876201dae9637e93e6b919.JPG"
+                                    alt="">
+                            </div>
+                            <div class="product-gallery__slide--small">
+                                <img src="" alt="">
+                                <img src="" alt="">
+                            </div>
+                        
+                            <div class="product-gallery__controls">
+                                <button class="product-gallery__control--prev">&#10094;</button>
+                                <button class="product-gallery__control--next">&#10095;</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col l-6">
+                        <div class="product-detail__information">
+                            <h1 class="product-detail__title"></h1>
+                            <div class="product-detail__text">
+                                <p>SKU:02934</p>
+                                <h3 class="product-detail__price"></h3>
+                                <h4>Màu sắc: Hồng Han hô</h4>
+                            </div>
+
+                            <div class="product-detail__color__input">
+                                <a href="https://ivymoda.com/sanpham/so-mi-hoa-tiet-ren-ms-16m8293-37812">
+                                    <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="004" style="border-radius: 50%;">
+                                </a>
+                            
+                                <a href="https://ivymoda.com/sanpham/so-mi-hoa-tiet-ren-ms-16m8293-37813">
+                                    <img src="https://pubcdn.ivymoda.com/ivy2/images/color/050.png" alt="050" style="border-radius: 50%;">
+                                </a> 
+                            </div>
+
+                            <div class="products__item-size">
+                                <ul class="products__item-select">
+                                    <li>S</li>
+                                    <li>M</li>
+                                    <li>L</li>
+                                    <li>XL</li>
+                                </ul>
+                            </div>
+
+                            <div class="quantity">
+                                <div class="quantity_container">
+                                    <button>-</button>
+                                    <input type="text" value="1" style="width: 30px;">
+                                    <button>+</button>
+                                </div>   
+                            </div>
+
+
+
+                            <div class="button-detail">
+                                <button class="button-detail__add">Them vao gio</button>
+                                <button class="button-detail__buy">Mua hang</button>
+                            </div>
+
+
+                            <div class="btn-Add">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+    <script>
+        let objSP = JSON.parse(localStorage.getItem("products"));
+        
+        document.querySelector(".product-gallery__img").src = `${objSP.image[0]}`;
+        let str = "";
+        for (let i = 0; i < objSP.image.length; i++) {
+            console.log(objSP);     
+            str += `<img src="${objSP.image[i]}" alt="">`
+        }
+        document.querySelector(".product-gallery__slide--small").innerHTML = str;
+        document.querySelector(".product-detail__title").innerText = `${objSP.ten}`;
+        document.querySelector(".product-detail__price").innerText = `${objSP.gia}`;
+    </script>
+</html>
