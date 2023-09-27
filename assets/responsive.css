@@ -1,7 +1,7 @@
 @media screen and (max-width: 767px) {
 
     .header__wrapper {
-        width: 100vw;
+        width: 103vw;
         border-bottom: 2px solid #c6c6c6;
         padding: 0 15px;
     }
@@ -31,13 +31,6 @@
         margin-top: 80px;
     }
 
-    .wrapper-slider {
-        width: 100%;
-        padding: 0px;
-        position: relative;
-        /* height: 89vh; */
-        height: 70vh;
-    }
 
     .products {}
 
@@ -146,7 +139,7 @@
 
 @media screen and (max-width: 767px) {
     .wrapper-slider {
-        width: 97%;
+        width: 103%;
         padding: 0 10px;
         position: relative;
         height: 60vh;
@@ -263,3 +256,6 @@
 
         
 }
+
+
+/* Thay đổi header cho màn hình có chiều rộng nhỏ hơn 390px */
